@@ -1,0 +1,84 @@
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.filter-div {
+  border-top: 1px solid var(--grey);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden; /* Hide the default scrollbar */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.links-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  opacity: 0.5;
+  border-bottom: 1px solid var(--white);
+  min-width: 85px;
+}
+
+.links-box:hover,
+.selected-box {
+  opacity: 1;
+  border-bottom: 1px solid var(--black);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.links-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.links-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--font-grey);
+}
+
+.selected-label {
+  color: var(--black);
+}
+
+.scroll-button {
+  background: var(--white);
+  border: 1px solid var(--black); /* Black outline */
+  font-size: 1rem; /* Smaller arrow size */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 2rem; /* Smaller button size */
+  height: 2rem; /* Smaller button size */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Fade effect around the circle */
+}
+
+.scroll-button.left {
+  left: 1rem;
+}
+
+.scroll-button.right {
+  right: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .filter-div {
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+  }
+}

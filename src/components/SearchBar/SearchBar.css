@@ -1,0 +1,130 @@
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  gap: 0rem;
+  padding: 0.8rem;
+  border: 1px solid var(--grey);
+  border-radius: 3rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  width: 60%;
+  cursor: pointer;
+}
+
+.search-bar-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  background: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar-line:hover {
+  background-color: var(--light-grey);
+  border-radius: 2rem;
+}
+
+.search-bar-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0); 
+}
+
+.search-bar-text2 {
+  font-size: 0.85rem;
+  font-weight: 200;
+  color: var(--font-grey); 
+  text-align: left;
+}
+
+.search-icon-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--theme);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.region-dropdown {
+  position: absolute;
+  top: 140px; 
+  left: 60;
+  background-color: white;
+  border: 1px solid var(--grey);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  border-radius: 0.5rem;
+  display: none;
+  z-index: 1000;
+}
+
+.region-dropdown.active {
+  display: block;
+}
+
+.region-item {
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+}
+
+.region-item:hover {
+  background-color: var(--light-grey);
+}
+
+.guest-modal {
+  position:fixed;
+  top: 160px; 
+  left: 50rem;
+  background-color: white;
+  border: 1px solid var(--grey);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.guest-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.guest-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.guest-buttons button {
+  margin: 0 0.5rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .search-bar {
+    display: none;
+  }
+}
+
+.search-bar-text.scrolled {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--font-black);
+  justify-content: space-evenly;
+}
+
+.search-bar-text2.scrolled {
+  display: none; 
+}
+
+.search-bar.scrolled {
+  width: 30%; 
+  gap: 0rem; 
+}
+
